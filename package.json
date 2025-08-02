@@ -1,0 +1,41 @@
+{
+  "name": "cypress-cucumber-automation",
+  "version": "1.0.0",
+  "description": "Cypress ve Cucumber kullanarak oluşturulmuş test otomasyon framework'ü",
+  "main": "index.js",
+ "scripts": {
+  "test": "cypress run",
+  "test:headed": "cypress run --headed",
+  "test:open": "cypress open",
+  "test:tag": "cypress run --env TAGS='@smoke'",
+  "test:tag:headed": "cypress run --headed --env TAGS='@tc01'",
+  "test:smoke": "cypress run --env TAGS='@smoke or @critical'",
+  "test:smoke:headed": "cypress run --headed --env TAGS='@smoke or @critical'"
+},
+  "keywords": [
+    "cypress",
+    "cucumber",
+    "bdd",
+    "test-automation",
+    "javascript",
+    "e2e-testing"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^13.6.0",
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "esbuild": "^0.19.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/e2e/step_definitions/**/*.{js,ts}",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
