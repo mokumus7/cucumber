@@ -24,7 +24,7 @@ module.exports = defineConfig({
     setupNodeEvents,
     specPattern: 'cypress/e2e/features/**/*.feature',
     supportFile: 'cypress/support/e2e.js',
-    baseUrl: 'https://www.google.com',
+    baseUrl: 'https://www.edu.goit.global/account/login',
     viewportWidth: 1280,
     viewportHeight: 720,
     defaultCommandTimeout: 10000,

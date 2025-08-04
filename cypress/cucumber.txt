@@ -1,0 +1,31 @@
+Cucumber - BDD
+1. npm init -y
+2. npm install cypress --save-dev
+3. npm install --save-dev @badeball/cypress-cucumber-preprocessor     -  Cypress ile .feature (Gherkin) dosyalariniz kullanmamizi sağlar.
+4. npm install --save-dev @bahmutov/cypress-esbuild-preprocessor      -  Cucumber dosyalarini  derlemek için kullanilir.
+5. npm install --save-dev esbuild                                     - JavaScript, TypeScript ve .feature gibi dosyalarinin calismasini saglar
+
+
+6. npx cypress open
+
+
+
+
+
+
+ Step definitions claslarinda
+import { Given, When } from '@badeball/cypress-cucumber-preprocessor';
+
+https://www.edu.goit.global/account/login
+user888@gmail.chrom
+1234567890
+
+
+cypress run --env TAGS='@login'
+npx cypress run --env TAGS="@tc03" --headed --browser chrome 
+
+
+
+1. feature dosyası olusturmak
+
+
